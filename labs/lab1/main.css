@@ -120,6 +120,15 @@ table td {
     padding: 4px 8px;
 }
 
+#hobbies {
+	position: relative;
+	right:150px;
+}
+
+.hobby {
+	color:rgba(250,0,41,.7);
+}
+
 footer {
 	position: relative;
 	left:50px;
