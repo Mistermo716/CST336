@@ -32,9 +32,13 @@ nav li {
   margin-right: 40px;
 }
 
-a li:hover{
+a:hover{
 	opacity: .8;
-	color:rgb(253,245,245);
+}
+
+.csumbLogo{
+	height:auto;
+	width:400px;
 }
  .mo {
    height: auto;
