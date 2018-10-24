@@ -32,8 +32,9 @@ nav li {
   margin-right: 40px;
 }
 
-a:hover{
+a li:hover{
 	opacity: .8;
+	color:rgb(253,245,245);
 }
  .mo {
    height: auto;
