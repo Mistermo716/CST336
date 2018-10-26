@@ -1,0 +1,95 @@
+.mainBody{
+  background: url(images/space.jpeg);
+}
+a{ 
+	font-family: 'Chakra Petch', sans-serif;
+}
+nav {
+  height: 40px;
+  display:absolute;
+  width:100%;
+}
+
+nav li {
+  display: inline-block;
+  color: rgb(253, 245, 245);
+  list-style: none;
+  width: 5%;
+  font-size: 17px;
+  height: 100%;
+  position: relative;
+  top:7px;
+  float: left;
+  border: none;
+  margin-right: 40px;
+}
+a{
+  text-decoration: none;
+}
+
+a:hover{
+	opacity: .8;
+	cursor: pointer; 
+}
+
+footer {
+	position: relative;
+	left:50px;
+	text-align: center;
+	margin: 60px 0;
+}
+footer p {
+	color: #404348;
+}
+.content {
+  width:1000px;
+  margin:auto;
+  margin-top:100px;
+}
+
+.card {
+  font-family: 'Chakra Petch', sans-serif;
+  top:13vh;
+  left:10vh;
+  width:300px;
+  height:400px;
+  color:whitesmoke;
+  transition:0.4s;
+  width:300px;
+  text-align:center;
+  font-size:16px;
+  float:left;
+  margin:15px;
+}
+.card:hover{
+  box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.2), 0 6px 20px 0 rgba(200, 200, 200, 0.19);
+}
+
+.container{
+  padding:20px 20px;
+}
+
+.cardImage{
+  width:100%;
+  height: auto;
+  padding: 0;
+}
+.moreInfo{
+  all: unset;
+  padding:10px;
+  background:rgba(100,100,100,.4);
+}
+
+.moreInfo:hover{
+  all: unset;
+  cursor:pointer;
+   padding:10px;
+  background:rgba(100,100,100,.5);
+  box-shadow:0 4px 8px rgba(200,200,200, .2);
+}
+moreInfo:click{
+  transition: all ease 1s;
+  box-shadow: 0 4px 8px rgba(200,0,0);
+}
+
+
