@@ -1,12 +1,13 @@
 .mainBody{
   background: url(images/space.jpeg);
+  font-family: 'Chakra Petch', sans-serif;
 }
 a{ 
 	font-family: 'Chakra Petch', sans-serif;
 }
 nav {
+  padding:0;
   height: 40px;
-  display:absolute;
   width:100%;
 }
 
@@ -14,14 +15,16 @@ nav li {
   display: inline-block;
   color: rgb(253, 245, 245);
   list-style: none;
-  width: 5%;
+  width: 10%;
+  padding:0;
   font-size: 17px;
   height: 100%;
   position: relative;
   top:7px;
-  float: left;
+  right:10px;
+  float: center;
+  margin-right:5px;
   border: none;
-  margin-right: 40px;
 }
 a{
   text-decoration: none;
@@ -90,6 +93,29 @@ footer p {
 moreInfo:click{
   transition: all ease 1s;
   box-shadow: 0 4px 8px rgba(200,0,0);
+}
+
+.pageContent{
+  color:whitesmoke;
+  height: 80vh;
+  background:linear-gradient(rgba(100,100,100,.6), rgba(100,100,100,.4));
+  width:90%;
+  margin:5%;
+}
+
+@media only screen and (max-width: 920px) {
+    .navLinks{
+      visibility:hidden;
+    }
+}
+
+.iotHeading{
+  color:whitesmoke;
+  position:relative;
+  text-align: center;
+  top:15vh;
+  height:70px;
+  width:100%;
 }
 
 
