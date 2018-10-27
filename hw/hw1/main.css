@@ -1,121 +1,126 @@
-.mainBody{
+.mainBody {
   background: url(images/space.jpeg);
   font-family: 'Chakra Petch', sans-serif;
 }
-a{ 
-	font-family: 'Chakra Petch', sans-serif;
+a {
+  font-family: 'Chakra Petch', sans-serif;
 }
 nav {
-  padding:0;
+  padding: 0;
   height: 40px;
-  width:100%;
+  width: 100%;
 }
 
-nav li {
+nav ul li {
   display: inline-block;
   color: rgb(253, 245, 245);
   list-style: none;
   width: 10%;
-  padding:0;
+  padding: 0;
   font-size: 17px;
   height: 100%;
   position: relative;
-  top:7px;
-  right:10px;
+  top: 7px;
+  right: 10px;
   float: center;
-  margin-right:5px;
+  margin-right: 5px;
   border: none;
 }
-a{
-  text-decoration: none;
+nav ul li a {
+  text-decoration: inherit;
+  all: unset;
 }
 
-a:hover{
-	opacity: .8;
-	cursor: pointer; 
+nav ul li a:hover {
+  text-decoration: none;
+  color: rgba(253, 245, 245);
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 footer {
-	position: relative;
-	left:50px;
-	text-align: center;
-	margin: 60px 0;
+  position: relative;
+  left: 50px;
+  text-align: center;
+  margin: 60px 0;
 }
 footer p {
-	color: #404348;
+  color: #404348;
 }
 .content {
-  width:1000px;
-  margin:auto;
-  margin-top:100px;
+  width: 1000px;
+  margin: auto;
+  margin-top: 100px;
 }
 
 .card {
   font-family: 'Chakra Petch', sans-serif;
-  top:13vh;
-  left:10vh;
-  width:300px;
-  height:400px;
-  color:whitesmoke;
-  transition:0.4s;
-  width:300px;
-  text-align:center;
-  font-size:16px;
-  float:left;
-  margin:15px;
+  top: 13vh;
+  left: 10vh;
+  width: 300px;
+  height: 400px;
+  color: whitesmoke;
+  transition: 0.4s;
+  width: 300px;
+  text-align: center;
+  font-size: 16px;
+  float: left;
+  margin: 15px;
 }
-.card:hover{
-  box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.2), 0 6px 20px 0 rgba(200, 200, 200, 0.19);
-}
-
-.container{
-  padding:20px 20px;
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.2),
+    0 6px 20px 0 rgba(200, 200, 200, 0.19);
 }
 
-.cardImage{
-  width:100%;
+.container {
+  padding: 20px 20px;
+}
+
+.cardImage {
+  width: 100%;
   height: auto;
   padding: 0;
 }
-.moreInfo{
+.moreInfo {
   all: unset;
-  padding:10px;
-  background:rgba(100,100,100,.4);
+  padding: 10px;
+  background: rgba(100, 100, 100, 0.4);
 }
 
-.moreInfo:hover{
+.moreInfo:hover {
   all: unset;
-  cursor:pointer;
-   padding:10px;
-  background:rgba(100,100,100,.5);
-  box-shadow:0 4px 8px rgba(200,200,200, .2);
+  cursor: pointer;
+  padding: 10px;
+  background: rgba(100, 100, 100, 0.5);
+  box-shadow: 0 4px 8px rgba(200, 200, 200, 0.2);
 }
-moreInfo:click{
+moreInfo:click {
   transition: all ease 1s;
-  box-shadow: 0 4px 8px rgba(200,0,0);
+  box-shadow: 0 4px 8px rgba(200, 0, 0);
 }
 
-.pageContent{
-  color:whitesmoke;
+.pageContent {
+  color: whitesmoke;
   height: auto;
-  background:linear-gradient(rgba(100,100,100,.6), rgba(100,100,100,.4));
-  width:90%;
-  margin:5%;
+  background: linear-gradient(
+    rgba(100, 100, 100, 0.6),
+    rgba(100, 100, 100, 0.4)
+  );
+  width: 90%;
+  margin: 5%;
 }
 
 @media only screen and (max-width: 920px) {
-    .navLinks{
-      visibility:hidden;
-    }
+  .navLinks {
+    visibility: hidden;
+  }
 }
 
-.iotHeading{
-  color:whitesmoke;
-  position:relative;
+.iotHeading {
+  color: whitesmoke;
+  position: relative;
   text-align: center;
-  top:15vh;
-  height:70px;
-  width:100%;
+  top: 15vh;
+  height: 70px;
+  width: 100%;
 }
-
-
