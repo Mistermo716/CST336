@@ -97,7 +97,7 @@ moreInfo:click{
 
 .pageContent{
   color:whitesmoke;
-  height: 80vh;
+  height: auto;
   background:linear-gradient(rgba(100,100,100,.6), rgba(100,100,100,.4));
   width:90%;
   margin:5%;
