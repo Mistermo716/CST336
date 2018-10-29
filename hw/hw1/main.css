@@ -106,7 +106,8 @@ moreInfo:click {
     rgba(100, 100, 100, 0.6),
     rgba(100, 100, 100, 0.4)
   );
-  width: 90%;
+  width: auto;
+  padding:20px;
   margin: 5%;
 }
 
@@ -115,6 +116,7 @@ moreInfo:click {
     visibility: hidden;
   }
 }
+  
 
 .iotHeading {
   color: whitesmoke;
