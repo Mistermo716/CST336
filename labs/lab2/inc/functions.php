@@ -1,7 +1,7 @@
 <?php
 
  function soundToPlay($val1, $val2, $val3){
-            if($val1 == $val2 && $val2 == $val3){
+            if($val1 == $val2 && $val2 == $val3 && $val1 == 0){
                 echo "<audio autoplay><source src='yay.mp3' type='audio/mpeg'></audio>";
             }
             else{
