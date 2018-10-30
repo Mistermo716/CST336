@@ -1,8 +1,18 @@
 <?php
 
+ function soundToPlay($val1, $val2, $val3){
+            if($val1 == $val2 && $val2 == $val3){
+                echo "<audio autoplay><source src='yay.mp3' type='audio/mpeg'></audio>";
+            }
+            else{
+                echo "<audio autoplay><source src='slot.mp3' type='audio/mpeg'></audio>";
+            }
+        }
+
  function displayPoints($randomValue1, $randomValue2, $randomValue3){
         
         echo "<div id='output'>";
+        soundToPlay($randomValue1, $randomValue2, $randomValue3);
         if($randomValue1 == $randomValue2 && $randomValue2 == $randomValue3){
             switch($randomValue1){
                 case 0: $totalPoints = 1000;
@@ -12,6 +22,10 @@
                         break;
                 case 2: $totalPoints = 250;
                         break;
+                case 3: $totalPoints = 900;
+                        break;
+                case 4: $totalPoints = 400;
+                        break;
             }
             echo "<h2> You won $totalPoints points!</h2>";
          }
@@ -20,6 +34,7 @@
          }
          echo "</div>";
         }
+    
         
         function displaySymbol($randomValue, $pos){
             
@@ -39,13 +54,17 @@
                 case 1: $symbol = "cherry";
                         break;
                 case 2: $symbol = "lemon";
+                        break;
+                case 3: $symbol="grapes";
+                        break;
+                case 4: $symbol = "orange";
             }
             echo "<img id='reel$pos' src='img/$symbol.png' alt='$symbol' title='".ucfirst($symbol) ."' width='70'/>";
         }
         
         function play(){
         for($i = 1; $i<4; $i++){
-            ${"randomValue". $i} = rand(0,2);
+            ${"randomValue". $i} = rand(0,4);
             displaySymbol(${"randomValue" . $i}, $i);
         }
         
