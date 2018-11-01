@@ -1,0 +1,143 @@
+.h1 {
+    position: absolute;
+    left:25vw;
+    top:48vh;
+    display: inline;
+}
+
+.h2 {
+    position: absolute;
+    left:25vw;
+    top:20vh;
+    display: inline;
+}
+.v2 {
+    position: absolute;
+    left:33vw;
+    top:35vh;
+    display: inline;
+    transform:rotate(270deg);
+}
+.v1 {
+    position: absolute;
+    left:18vw;
+    top:35vh;
+    display: inline;
+    transform:rotate(270deg);
+}
+.xo {
+    width:18vw;
+}
+.xo0 {
+    position: absolute;
+    left:28vw;
+    top:2vh;
+}
+.xo1 {
+    position: absolute;
+    left:41vw;
+    top:2vh;
+}
+
+.xo2 {
+    position: absolute;
+    left:55vw;
+    top:2vh;
+}
+
+.xo3 {
+    position: absolute;
+    left:28vw;
+    top:30vh;
+}
+
+.xo4 {
+    position: absolute;
+    left:41vw;
+    top:30vh;
+}
+.xo5 {
+    position: absolute;
+    left:55vw;
+    top:30vh;
+}
+.xo6 {
+    position: absolute;
+    left:28vw;
+    top:56vh;
+}
+.xo7 {
+    position: absolute;
+    left:41vw;
+    top:56vh;
+}
+.xo8 {
+    position: absolute;
+    left:55vw;
+    top:56vh;
+}
+.s:focus{
+    outline-width: 0;
+}
+.s {
+    position: absolute;
+    border: none;
+    text-decoration: none;
+    background-color: rgba(200,0,0,0);
+}
+.s0 {
+    height:23vh;
+    width:12vw;
+    left:30vw;
+    top:10vh;
+}
+.s1{
+    height:23vh;
+    width:15vw;
+    left:42.5vw;
+    top:9vh;
+}
+.s2{
+    height:23vh;
+    width:12vw;
+    left:57vw;
+    top:9vh;
+}
+.s3{
+    height:23vh;
+    width:12vw;
+    left:30vw;
+    top:35vh;
+}
+.s4{
+    height:24vh;
+    width:14vw;
+    left:42.5vw;
+    top:35vh;
+}
+.s5{
+    height:23vh;
+    width:12vw;
+    left:57vw;
+    top:35vh;
+}
+.s6{
+    height:23vh;
+    width:12vw;
+    left:30vw;
+    top:61vh;
+}
+.s7{
+    height:24vh;
+    width:14vw;
+    left:42.5vw;
+    top:61vh;
+}
+.s8{
+    height:23vh;
+    width:12vw;
+    left: 57vw;
+    top:61vh;
+}
+    
+
