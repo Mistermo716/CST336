@@ -32,39 +32,35 @@ if(isset($_POST['resetWin'])){
 
 if(count($_SESSION['BOARD']) % 2 == 0){
     if(isset($_POST['s0']) && isset($_SESSION['BOARD'][0]) != 1){
-        $board[0] = "X";
+        $_SESSION['BOARD'][0] = "X";
     }
     if(isset($_POST['s1']) && isset($_SESSION['BOARD'][1]) != 1){
-        $board[1] = "X";
+        $_SESSION['BOARD'][1] = "X";
     }
     if(isset($_POST['s2']) && isset($_SESSION['BOARD'][2]) != 1){
-        $board[2] = "X";
+        $_SESSION['BOARD'][2] = "X";
     }
     if(isset($_POST['s3']) && isset($_SESSION['BOARD'][3]) != 1){
-        $board[3] = "X";
+        $_SESSION['BOARD'][3] = "X";
     }
     if(isset($_POST['s4']) && isset($_SESSION['BOARD'][4]) != 1){
-        $board[4] = "X";
+        $_SESSION['BOARD'][4] = "X";
     }
     if(isset($_POST['s5']) && isset($_SESSION['BOARD'][5]) != 1){
-        $board[5] = "X";
+        $_SESSION['BOARD'][5] = "X";
     }
     if(isset($_POST['s6']) && isset($_SESSION['BOARD'][6]) != 1){
-        $board[6] = "X";
+        $_SESSION['BOARD'][6] = "X";
     }
     if(isset($_POST['s7']) && isset($_SESSION['BOARD'][7]) != 1){
-        $board[7] = "X";
+        $_SESSION['BOARD'][7] = "X";
     }
     if(isset($_POST['s8']) && isset($_SESSION['BOARD'][8]) != 1){
-        $board[8] = "X";
-    }
-    for($i =0; $i < 9; $i++){
-        if($board[$i] != ""){
-            $_SESSION['BOARD'][$i] = $board[$i];
-        }
+        $_SESSION['BOARD'][8] = "X";
     }
 }
 else if (count($_SESSION['BOARD']) % 2 == 1) {
+    
     if(isset($_POST['s0']) && isset($_SESSION['BOARD'][0]) != 1){
         $_SESSION['BOARD'][0] = "O";
     }
@@ -195,16 +191,19 @@ if(($_SESSION['BOARD'][2] == $_SESSION['BOARD'][5] && $_SESSION['BOARD'][5] == $
     }
     
 }
-if(count($_SESSION['BOARD']) % 2 == 0){
+if(sizeof($_SESSION['BOARD']) % 2 == 0){
 
     echo "<h1 style='color:black'>Player 1's Turn</h1>";
 }
 else{
     echo "<h1 style='color:black'>Player 2's Turn</h1>";
 }
+    $playerKeys = array_keys($_SESSION['WINS']); //did this just to use another array function below code is like inception
     
-    echo "<h1 class='player1' style='color:black'> Player 1 Score: ". $_SESSION['WINS']['Player1'] .  "</h1>";
-    echo "<h1 class='player2' style='color:black'> Player 2 Score: ". $_SESSION['WINS']['Player2'] .  "</h1>";
+    echo "<h1 class='player1' style='color:black'> Player 1 Score: ". $_SESSION['WINS'][$playerKeys[0]] .  "</h1>";
+    echo "<h1 class='player2' style='color:black'> Player 2 Score: ". $_SESSION['WINS'][$playerKeys[1]] .  "</h1>";
+    echo "<h1 style='color:black'> Lucky Spot of Round: " . rand(1,9) . "</h1>"; //put your X or O at lucky spot :)
+    //also an excuse to use the rand() function. Since my submissions are using submit buttons loops are almost impossible.
 }
 
 ?>
