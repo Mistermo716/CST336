@@ -1,7 +1,7 @@
 .h1 {
     position: absolute;
-    left:25vw;
-    top:48vh;
+    left:400px;
+    top:125px;
     display: inline;
 }
 
@@ -22,7 +22,6 @@ text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px green, 0 0 30px green, 0 0 40
 .player1 {
 font-size: 30px;
 font-family: 'Futura';
-color: black;
 text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;
 }
 
@@ -35,74 +34,74 @@ text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00F, 0 0 30px #00F, 0 0 40px
 
 .h2 {
     position: absolute;
-    left:25vw;
-    top:20vh;
+    left:400px;
+    top:325px;
     display: inline;
 }
 .v2 {
     position: absolute;
-    left:33vw;
-    top:35vh;
+    left:500px;
+    top:225px;
     display: inline;
     transform:rotate(270deg);
 }
 .v1 {
     position: absolute;
-    left:18vw;
-    top:35vh;
+    left:300px;
+    top:225px;
     display: inline;
     transform:rotate(270deg);
 }
 .xo {
-    width:18vw;
+    width:240px;
 }
 .xo0 {
     position: absolute;
-    left:28vw;
-    top:2vh;
+    left:440px;
+    top:10px;
 }
 .xo1 {
     position: absolute;
-    left:41vw;
-    top:2vh;
+    left:630px;
+    top:10px;
 }
 
 .xo2 {
     position: absolute;
-    left:55vw;
-    top:2vh;
+    left:820px;
+    top:10px;
 }
 
 .xo3 {
     position: absolute;
-    left:28vw;
-    top:30vh;
+    left:440px;
+    top:200px;
 }
 
 .xo4 {
     position: absolute;
-    left:41vw;
-    top:30vh;
+    left:630px;
+    top:200px;
 }
 .xo5 {
     position: absolute;
-    left:55vw;
-    top:30vh;
+    left:830px;
+    top:200px;
 }
 .xo6 {
     position: absolute;
-    left:28vw;
-    top:56vh;
+    left:440px;
+    top:390px;
 }
 .xo7 {
     position: absolute;
-    left:41vw;
-    top:56vh;
+    left:630px;
+    top:390px;
 }
 .xo8 {
     position: absolute;
-    left:55vw;
-    top:56vh;
+    left:830px;
+    top:390px;
 }
 .s:focus{
     outline-width: 0;
@@ -114,70 +113,67 @@ text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00F, 0 0 30px #00F, 0 0 40px
     background-color: rgba(200,0,0, 0);
 }
 .s0 {
-    height:23vh;
-    width:12vw;
-    left:30vw;
-    top:10vh;
+    height:170px;
+    width:170px;
+    left:480px;
+    top:50px;
 }
 .s1{
-    height:23vh;
-    width:15vw;
-    left:42.5vw;
-    top:9vh;
+    height:170px;
+    width:180px;
+    left:660px;
+    top:50px;
 }
 .s2{
-    height:23vh;
-    width:12vw;
-    left:57vw;
-    top:9vh;
+    height:170px;
+    width:180px;
+    left:860px;
+    top:50px;
 }
 .s3{
-    height:23vh;
-    width:12vw;
-    left:30vw;
-    top:35vh;
+    height:180px;
+    width:180px;
+    left:470px;
+    top:230px;
 }
 .s4{
-    height:24vh;
-    width:14vw;
-    left:42.5vw;
-    top:35vh;
+    height:180px;
+    width:180px;
+    left:660px;
+    top:230px;
 }
 .s5{
-    height:23vh;
-    width:12vw;
-    left:57vw;
-    top:35vh;
+    height:180px;
+    width:180px;
+    left:860px;
+    top:230px;
 }
 .s6{
-    height:23vh;
-    width:12vw;
-    left:30vw;
-    top:61vh;
+   height:180px;
+    width:180px;
+    left:470px;
+    top:430px;
 }
 .s7{
-    height:24vh;
-    width:14vw;
-    left:42.5vw;
-    top:61vh;
+    height:180px;
+    width:180px;
+    left:660px;
+    top:430px;
 }
 .s8{
-    height:23vh;
-    width:12vw;
-    left: 57vw;
-    top:61vh;
+    height:180px;
+    width:180px;
+    left:860px;
+    top:430px;
 }
 
 .reset{
     weight: bold;
-    color:red;
     border: none;
     text-decoration: none;
-    background-color: rgba(150,150,150, .02);
+    background-color: rgba(150,150,150, .2);
     padding: 20px;
     margin:10px;
-    box-shadow: 0 4px 8px 0 rgba(200, 0, 0, 0.2),
-    0 6px 20px 0 rgba(200, 0, 0, 0.19);
 }
 .reset:focus{
     outline-width: 0;

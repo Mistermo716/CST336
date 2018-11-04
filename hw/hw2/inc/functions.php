@@ -11,8 +11,8 @@ echo "<img class='h1' src='img/neonline.png' width='700vw'/>";
      echo "<input style='color:white' class='s s$i' type='submit' value='' name='s$i' />";   
     }
 
-    echo "<input class='reset' style='color:red' type='submit' value='Play Again' name='reset' />";
-    echo "<input class='reset' style='color:red' type='submit' value='Reset Score' name='resetWin' />";
+    echo "<input class='reset' style='color:white' type='submit' value='Play Again' name='reset' />";
+    echo "<input class='reset' style='color:white' type='submit' value='Reset Score' name='resetWin' />";
     
     echo'</form>';
 }
@@ -185,11 +185,11 @@ if(($_SESSION['BOARD'][2] == $_SESSION['BOARD'][5] && $_SESSION['BOARD'][5] == $
     
     switch($_SESSION['BOARD'][2]){
         case "X":
-            echo "<h1 style='color:white'> Player 1 Wins </h1>";
+            echo "<h1 style='color:black'> Player 1 Wins </h1>";
             $_SESSION['WINS']['Player1']++;
             break;
         case "O":
-            echo "<h1 style='color:white'> Player 2 Wins </h1>";
+            echo "<h1 style='color:black'> Player 2 Wins </h1>";
             $_SESSION['WINS']['Player2']++;
             break;
     }
