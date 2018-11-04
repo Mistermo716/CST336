@@ -5,6 +5,34 @@
     display: inline;
 }
 
+.title{
+color: black;
+font-size: 40px;
+font-family: 'Futura';
+color: #fff;
+text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px white, 0 0 30px white, 0 0 40px green, 0 0 55px white, 0 0 75px white;
+}
+
+h1{
+font-size: 30px;
+font-family: 'Futura';
+text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px green, 0 0 30px green, 0 0 40px green, 0 0 55px green, 0 0 75px green;
+}
+
+.player1 {
+font-size: 30px;
+font-family: 'Futura';
+color: black;
+text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;
+}
+
+.player2 {
+font-size: 30px;
+font-family: 'Futura';
+color: #fff;
+text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00F, 0 0 30px #00F, 0 0 40px #00F, 0 0 55px #00F, 0 0 75px #00F;
+}
+
 .h2 {
     position: absolute;
     left:25vw;
@@ -83,7 +111,7 @@
     position: absolute;
     border: none;
     text-decoration: none;
-    background-color: rgba(200,0,0,0);
+    background-color: rgba(200,0,0, 0);
 }
 .s0 {
     height:23vh;
@@ -138,6 +166,21 @@
     width:12vw;
     left: 57vw;
     top:61vh;
+}
+
+.reset{
+    weight: bold;
+    color:red;
+    border: none;
+    text-decoration: none;
+    background-color: rgba(150,150,150, .02);
+    padding: 20px;
+    margin:10px;
+    box-shadow: 0 4px 8px 0 rgba(200, 0, 0, 0.2),
+    0 6px 20px 0 rgba(200, 0, 0, 0.19);
+}
+.reset:focus{
+    outline-width: 0;
 }
     
 
