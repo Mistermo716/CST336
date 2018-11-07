@@ -2,9 +2,9 @@
 <?php 
     $backgroundImage = "img/sea.jpg";
     //API call is below
-    if(isset($_GET['keyword'])){
+     include 'api/pixabayAPI.php';
+    if(isset($_GET['keyword']) && empty($_GET['category'])){
         // echo "You searched for: " . $_GET['keyword'];
-        include 'api/pixabayAPI.php';
         if(!isset($_GET['layout'])){ //if layout is not set
         $imageURLs = getImageURLs($_GET['keyword']);
         }
@@ -13,6 +13,14 @@
         }
         $backgroundImage = $imageURLs[array_rand($imageURLs)];
         
+    } elseif(isset($_GET['category']) && empty($_GET['keyword'])) {
+        if(!isset($_GET['layout'])){ //if layout is not set
+        $imageURLs = getImageURLs($_GET['category']);
+        }
+        else{ //if layout is set pass second parameter for layout
+            $imageURLs = getImageURLs($_GET['category'], $_GET['layout']);
+        }
+        $backgroundImage = $imageURLs[array_rand($imageURLs)];
     }
     
 ?>
@@ -49,9 +57,10 @@
                 // unset($imageURLs[$randomIndex]); //will remove this from array
                 // //unset destroys variables or in this case the image in the array.
                 // }
-                if($_GET['keyword'] == ""){ //if no keyword dont display carousel
+                if($_GET['keyword'] == "" && $_GET['category'] == ""){ //if no keyword dont display carousel
                     
                 }
+                
                 else{
         ?>
         
@@ -104,7 +113,7 @@
             <label for="Horizontal"></label><label for = "lhorizontal"> Horizontal</label>
             <input type="radio" id="lvertical" name="layout" value="vertical">
             <label for="Vertical"></label><label for="lvertical"> Vertical</label>
-            <select name="keyword">
+            <select name="category">
                 <option value="">Select One</option>
                 <option value="Island">Island</option>
                 <option value="Desert">Desert</option>
