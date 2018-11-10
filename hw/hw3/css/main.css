@@ -1,0 +1,33 @@
+button{
+  width:100%;
+}
+
+form select{
+  display:block;
+  width:100%;
+  background-color: rgba(200,200,200,0.0);
+  height:30px;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+.submitBtn{
+  width:100%;
+  left:100%;
+  background-color:rgba(0,0,0,0);
+}
+
+.modalBtn{
+  background-color: black;
+  border:none;
+  border-radius: none;
+  color:white;
+  cursor:pointer;
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+  font-weight:bold;
+}
+.modalBtn:hover{
+  background-color: red;
+}
+.modalBtn:focus{
+  outline:0;
+}
