@@ -39,10 +39,14 @@ function displayForm(){
   $_SESSION['search'] = $_GET['search'];
   $_SESSION['lang'] = $_GET['lang'];
   $_SESSION['source'] = $_GET['source'];
+  $_SESSION['pageSize'] = $_GET['pageSize'];
+  $_SESSION['sort'] = $_GET['sort'];
   
   $search= '';
   $lang = '';
   $source = '';
+  $pageSize = '';
+  $sort = '';
   
   if($_SESSION['search'] != ''){
     $search = $_SESSION['search'];
@@ -53,6 +57,12 @@ function displayForm(){
   }
   if($_SESSION['source'] != ''){
     $source = $_SESSION['source'];
+  }
+  if($_SESSION['pageSize'] != ''){
+    $pageSize = $_SESSION['pageSize'];
+  }
+  if($_SESSION['sort'] != ''){
+    $sort = $_SESSION['sort'];
   }
   
   $modal = '<button type="button" class="modalBtn glyphicon glyphicon-search" data-toggle="modal" data-target="#exampleModal">
@@ -79,6 +89,15 @@ function displayForm(){
       <option value="es">Spanish</option>
       <option value="fr">French</option>
       </select>
+      
+      <select name="sort" placeholder="Sort By">
+        <option value="">Sort By</option>
+        <option value="publishedAt">Date</option>
+        <option value="relevancy">Relevancy</option>
+        <option value="popularity">Popularity</option>
+        </select>
+        
+        <input placeholder="Number of Pages" class="numberInput" type="number" name="pageSize" min="10" max="100" value="'.$pageSize.'"></input>
     <input type="submit" class="form-control submitBtn" placeholder="Search">
     
 </form>
@@ -98,19 +117,33 @@ function getSearchResults(){
     getSources();
     echo $form;
     $cat =  str_replace(' ', '', $_GET['search']);
-    getNews($cat, $_GET['lang'], $_GET['source']);
+    getNews($cat, $_GET['lang'], $_GET['source'], $_GET['sort'], $_GET['pageSize']);
   }
   elseif(isset($_GET['lang'])){
     getSources();
     echo $form;
     $cat =  str_replace(' ', '', $_GET['search']);
-    getNews($cat, $_GET['lang'], $_GET['source']);
+    getNews($cat, $_GET['lang'], $_GET['source'], $_GET['sort'], $_GET['pageSize']);
   }
   elseif(isset($_GET['source'])){
     getSources();
     echo $form;
     $cat =  str_replace(' ', '', $_GET['search']);
-    getNews($cat, $_GET['lang'], $_GET['source']);
+    getNews($cat, $_GET['lang'], $_GET['source'], $_GET['sort'], $_GET['pageSize']);
+  }
+  elseif(isset($_GET['sort'])){
+    getSources();
+    echo $form;
+    $cat =  str_replace(' ', '', $_GET['search']);
+    getNews($cat, $_GET['lang'], $_GET['source'], $_GET['sort'], $_GET['pageSize']);
+    
+  }
+  elseif(isset($_GET['pageSize'])){
+    getSources();
+    echo $form;
+    $cat =  str_replace(' ', '', $_GET['search']);
+    getNews($cat, $_GET['lang'], $_GET['source'], $_GET['sort'], $_GET['pageSize']);
+    
   }
   else{
     getSources();

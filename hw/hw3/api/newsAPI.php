@@ -1,10 +1,10 @@
 <?php
 
-function getNews($keyword='', $lang='en', $source=''){
+function getNews($keyword='', $lang='en', $source='', $sort = '', $pageSize = 20){
     $curl = curl_init();
   
   curl_setopt_array($curl, array(
-      CURLOPT_URL => "https://newsapi.org/v2/everything?q=$keyword&language=$lang&sources=$source&apiKey=6e77f8ab73e34fa0831186ed84833fff",
+      CURLOPT_URL => "https://newsapi.org/v2/everything?q=$keyword&language=$lang&sources=$source&sortBy=$sort&pageSize=$pageSize&apiKey=6e77f8ab73e34fa0831186ed84833fff",
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_TIMEOUT => 30,
       CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
@@ -139,6 +139,8 @@ function getTopHeadlines($category='top'){
       $date = $article['publishedAt'];
       $displayDate = substr($date, 0, strpos($date, 'T'));
       
+      if($image != ""){
+      
       if($count == 1){
         echo '<div class="row">';
         echo '<br />';
@@ -167,6 +169,10 @@ function getTopHeadlines($category='top'){
       }
       else{
         $count = 1;
+      }
+      }
+      else{
+        
       }
     }
 
