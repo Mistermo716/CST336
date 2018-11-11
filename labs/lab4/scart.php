@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include 'functions.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,7 +32,11 @@
                 <br /> <br /> <br />
                 <h2>Shopping Cart</h2>
                 <!-- Cart Items -->
-
+                    <?php 
+                        if(isset($_SESSION['cart'])){
+                            displayCart();
+                        }
+                    ?>
             </div>
         </div>
     </body>

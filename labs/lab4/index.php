@@ -1,3 +1,23 @@
+<?php
+    session_start();
+    include 'functions.php';
+    if(!isset($_SESSION['cart'])){
+        $_SESSION['cart'] = array();
+    }
+    if(isset($_POST['itemName'])){
+        $newItem = array();
+        $newItem['name'] = $_POST['itemName'];
+        $newItem['id'] = $_POST['itemId'];
+        $newItem['price'] = $_POST['itemPrice'];
+        $newItem['image'] = $_POST['itemImage'];
+        array_push($_SESSION['cart'], $newItem);
+    }
+    if(isset($_GET['query'])){
+        include 'wmapi.php';
+        $items = getProducts($_GET['query']);
+    }
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -38,7 +58,7 @@
             </form>
             
             <!-- Display Search Results -->
-            
+            <?php displayResults(); ?>
         </div>
     </div>
     </body>
