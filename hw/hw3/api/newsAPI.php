@@ -20,26 +20,30 @@ function getNews($keyword='', $lang='en', $source=''){
     $data = json_decode($jsonData, true); //true makes it an array!
     echo '<div class="container-fluid">';
     $count = 1;
-    foreach($data['articles'] as $article){
+    
+   foreach($data['articles'] as $article){
       $image = $article['urlToImage'];
       $title = $article['title'];
       $description = $article['description'];
       $url = $article['url'];
       $author = $article['author'];
-      $name = $article['name'];
+      $name = $article['source']['name'];
       $date = $article['publishedAt'];
+      $displayDate = substr($date, 0, strpos($date, 'T'));
       
       if($count == 1){
         echo '<div class="row">';
         echo '<br />';
       }
       
-      echo '<div class="col col-sm-12 col-lg-6">';
+      echo '<div class="col-sm-12 col-lg-6" col-12>';
       echo "<div class='card mx-auto'>";
       echo "<img class='card-img-top' src='$image' alt='Card image cap'>";
       echo "<div class='card-body'>";
       echo "<h5 class='card-title'>$title</h5>";
-      echo "<p class='card-text'>Date: $date</p>";
+      echo "<p class='card-text'>Date: $displayDate</p>";
+      echo "<p class='card-text'>Author: $author</p>";
+      echo "<p class='card-text'>Source: $name</p>";
       echo "<p class='card-text'>$description</p>";
       echo"<a href='$url' class='btn btn-primary'>Read More</a>";
       echo "</div>";
@@ -140,7 +144,7 @@ function getTopHeadlines($category='top'){
         echo '<br />';
       }
       
-      echo '<div class="col col-sm-12 col-lg-6" col-12>';
+      echo '<div class="col-sm-12 col-lg-6" col-12>';
       echo "<div class='card mx-auto'>";
       echo "<img class='card-img-top' src='$image' alt='Card image cap'>";
       echo "<div class='card-body'>";

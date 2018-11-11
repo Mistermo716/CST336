@@ -36,6 +36,25 @@ function displayHeadlines($category){
 
 
 function displayForm(){
+  $_SESSION['search'] = $_GET['search'];
+  $_SESSION['lang'] = $_GET['lang'];
+  $_SESSION['source'] = $_GET['source'];
+  
+  $search= '';
+  $lang = '';
+  $source = '';
+  
+  if($_SESSION['search'] != ''){
+    $search = $_SESSION['search'];
+  }
+  
+  if($_SESSION['lang'] != ''){
+    $lang = $_SESSION['lang'];
+  }
+  if($_SESSION['source'] != ''){
+    $source = $_SESSION['source'];
+  }
+  
   $modal = '<button type="button" class="modalBtn glyphicon glyphicon-search" data-toggle="modal" data-target="#exampleModal">
   Search <div class="fa fa-search"></div>
 </button><div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -51,11 +70,11 @@ function displayForm(){
         <form>
   <div class="row">
     <div class="col">
-      <input name="search" type="text" class="form-control" placeholder="Keyword">
+      <input name="search" type="text" class="form-control" placeholder="Search" value='. "$search" .'>
     </div>
     </div>' . getSources() .
     '
-    <select name="lang">
+    <select  name="lang">
       <option value="en">English</option>
       <option value="es">Spanish</option>
       <option value="fr">French</option>
