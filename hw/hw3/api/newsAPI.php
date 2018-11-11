@@ -140,7 +140,7 @@ function getTopHeadlines($category='top'){
         echo '<br />';
       }
       
-      echo '<div class="col col-sm-12 col-lg-6">';
+      echo '<div class="col col-sm-12 col-lg-6" col-12>';
       echo "<div class='card mx-auto'>";
       echo "<img class='card-img-top' src='$image' alt='Card image cap'>";
       echo "<div class='card-body'>";
