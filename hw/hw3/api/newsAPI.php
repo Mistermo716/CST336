@@ -31,6 +31,8 @@ function getNews($keyword='', $lang='en', $source='', $sort = '', $pageSize = 20
       $date = $article['publishedAt'];
       $displayDate = substr($date, 0, strpos($date, 'T'));
       
+      if($image != ""){
+      
       if($count == 1){
         echo '<div class="row">';
         echo '<br />';
@@ -59,6 +61,10 @@ function getNews($keyword='', $lang='en', $source='', $sort = '', $pageSize = 20
       }
       else{
         $count = 1;
+      }
+      }
+      else{
+        
       }
     }
   
