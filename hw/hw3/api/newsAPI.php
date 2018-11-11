@@ -25,6 +25,9 @@ function getNews($keyword='', $lang='en', $source=''){
       $title = $article['title'];
       $description = $article['description'];
       $url = $article['url'];
+      $author = $article['author'];
+      $name = $article['name'];
+      $date = $article['publishedAt'];
       
       if($count == 1){
         echo '<div class="row">';
@@ -36,6 +39,7 @@ function getNews($keyword='', $lang='en', $source=''){
       echo "<img class='card-img-top' src='$image' alt='Card image cap'>";
       echo "<div class='card-body'>";
       echo "<h5 class='card-title'>$title</h5>";
+      echo "<p class='card-text'>Date: $date</p>";
       echo "<p class='card-text'>$description</p>";
       echo"<a href='$url' class='btn btn-primary'>Read More</a>";
       echo "</div>";
@@ -126,6 +130,10 @@ function getTopHeadlines($category='top'){
       $title = $article['title'];
       $description = $article['description'];
       $url = $article['url'];
+      $author = $article['author'];
+      $name = $article['source']['name'];
+      $date = $article['publishedAt'];
+      $displayDate = substr($date, 0, strpos($date, 'T'));
       
       if($count == 1){
         echo '<div class="row">';
@@ -137,6 +145,9 @@ function getTopHeadlines($category='top'){
       echo "<img class='card-img-top' src='$image' alt='Card image cap'>";
       echo "<div class='card-body'>";
       echo "<h5 class='card-title'>$title</h5>";
+      echo "<p class='card-text'>Date: $displayDate</p>";
+      echo "<p class='card-text'>Author: $author</p>";
+      echo "<p class='card-text'>Source: $name</p>";
       echo "<p class='card-text'>$description</p>";
       echo"<a href='$url' class='btn btn-primary'>Read More</a>";
       echo "</div>";
