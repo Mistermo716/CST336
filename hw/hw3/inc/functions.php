@@ -4,7 +4,7 @@ include 'api/newsAPI.php';
 
 function displayNavbar(){
 echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Courier Pigeon</a>
+  <a class="navbar-brand" href="#"><img class="logo" src="img/logo.png" />Courier Pigeon</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

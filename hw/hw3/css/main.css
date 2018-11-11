@@ -31,3 +31,6 @@ form select{
 .modalBtn:focus{
   outline:0;
 }
+.logo{
+  width:40px;
+}
