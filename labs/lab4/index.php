@@ -5,12 +5,21 @@
         $_SESSION['cart'] = array();
     }
     if(isset($_POST['itemName'])){
-        $newItem = array();
+         $newItem = array();
         $newItem['name'] = $_POST['itemName'];
         $newItem['id'] = $_POST['itemId'];
         $newItem['price'] = $_POST['itemPrice'];
         $newItem['image'] = $_POST['itemImage'];
+        foreach($_SESSION['cart'] as &$item){
+        if($newItem['id'] == $item['id']){
+            $item['quantity'] += 1;
+            $found = true;
+        }
+        }
+        if($found != true){
+            $newItem['quantity'] = 1;
         array_push($_SESSION['cart'], $newItem);
+        }
     }
     if(isset($_GET['query'])){
         include 'wmapi.php';
@@ -41,7 +50,10 @@
                     </div>
                     <ul class='nav navbar-nav'>
                         <li><a href='index.php'>Home</a></li>
-                        <li><a href='scart.php'>Cart</a></li>
+                        <li><a href='scart.php'>
+                        <span class='glyphicon glypicon-shopping-cart' aria-hidden='true'>
+                        
+                        </span>Cart: <?php displayCartCount(); ?></a></li>
                     </ul>
                 </div>
             </nav>

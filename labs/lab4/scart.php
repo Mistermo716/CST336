@@ -1,6 +1,30 @@
 <?php
     session_start();
     include 'functions.php';
+    
+    if(isset($_POST['removeId'])){
+        foreach($_SESSION['cart'] as $itemKey => $item){
+            if($item['id']== $_POST['removeId']){
+                unset($_SESSION['cart'][$itemKey]);
+            }
+        }
+    }
+    
+    if(isset($_POST['itemId'])){
+        foreach($_SESSION['cart'] as &$item){
+            if($item['id'] == $_POST['itemId']){
+                $item['quantity'] = $_POST['update'];
+                //will remove item if quantity is 0
+                if($item['quantity'] == 0){
+                    foreach($_SESSION['cart'] as $itemKey => $item){
+                        if($item['quantity']== 0){
+                            unset($_SESSION['cart'][$itemKey]);
+            }
+        }
+                }
+            } 
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html>
