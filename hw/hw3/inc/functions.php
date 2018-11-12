@@ -36,6 +36,7 @@ function displayHeadlines($category){
 
 
 function displayForm(){
+  $_SESSION['pageSize'] = 20; //initialize page size to default
   $_SESSION['search'] = $_GET['search'];
   $_SESSION['lang'] = $_GET['lang'];
   $_SESSION['source'] = $_GET['source'];
@@ -45,7 +46,7 @@ function displayForm(){
   $search= '';
   $lang = '';
   $source = '';
-  $pageSize = '';
+  $pageSize = '20';
   $sort = '';
   
   if($_SESSION['search'] != ''){
@@ -96,7 +97,7 @@ function displayForm(){
         <option value="relevancy">Relevancy</option>
         <option value="popularity">Popularity</option>
         </select>
-        
+  
         <input placeholder="Number of Pages" class="numberInput" type="number" name="pageSize" min="10" max="100" value="'.$pageSize.'"></input>
     <input type="submit" class="form-control submitBtn" placeholder="Search">
     
