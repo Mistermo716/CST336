@@ -13,6 +13,63 @@ function displayCategories(){
   foreach($records as $record){
     echo "<option value='".$record["catId"]."'>" .$record["catName"]. "</option>";
   }
+  
+  function displaySearchResults(){
+    global $conn;
+    
+    if(isset($_GET['searchForm'])){
+      echo "<h3>Products Found: </h3>";
+      
+      $namedParameters = array();
+      
+      //$sql = "SELECT * FROM om_product WHERE 1 and productName LIKE '%" .$_GET['product'] . "%'";
+      //commented out method dangerous and sql injection can occur.
+      
+      $sql = "SELECT * FROM om_product WHERE 1";
+
+      if(!empty($_GET['product'])){
+      $sql .= " AND productName LIKE :productName 
+      OR productDescription LIKE :productName";
+      $namedParameters[":productName"] = "%" . $_GET['product'] . "%";
+      }
+      
+      if(!empty($_GET['category'])){
+        $sql .= " AND catId LIKE :categoryId";
+      $namedParameters[":categoryId"] = "%" . $_GET['category'] . "%";
+      }
+      
+      if(!empty($_GET['priceFrom'])){
+        $sql .= " AND price >= :priceFrom";
+      $namedParameters[":priceFrom"] = "%" . $_GET['priceFrom'] . "%";
+      }
+      
+      if(!empty($_GET['priceTo'])){
+        $sql .= " AND price <= :priceTo";
+      $namedParameters[":priceTo"] = "%" . $_GET['priceTo'] . "%";
+      }
+      
+      if(isset($_GET['orderBy'])){
+        if($_GET['orderBy'] == price){
+          $sql .= " ORDER BY price";
+        }
+        else{
+          $sql .= "ORDER BY productName";
+        }
+      }
+      
+      
+        $stmt = $conn->prepare($sql);
+        $stmt->execute($namedParameters);
+        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        foreach ($records as $record) {
+          
+          echo "<a href=\"purchaseHistory.php?productId=".$record["productId"]."\">History</a>";
+          echo  $record["productName"] . " " . $record["productDescription"] . " $" . $record["price"] . "<br /><br />";
+ } 
+
+    }
+  }
 }
 
 ?>
@@ -49,6 +106,7 @@ function displayCategories(){
       </form>
       <br />
     </div>
-    <br>
+    <hr>
+    <?= displaySearchResults(); ?>
   </body>
 </html>
