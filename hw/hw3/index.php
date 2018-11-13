@@ -3,6 +3,7 @@
   <head>
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/journal/bootstrap.min.css" rel="stylesheet" integrity="sha384-5C8TGNupopdjruopVTTrVJacBbWqxHK9eis5DB+DYE6RfqIJapdLBRUdaZBTq7mE" crossorigin="anonymous">
   <link href="css/main.css" rel="stylesheet"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   
   <body>
