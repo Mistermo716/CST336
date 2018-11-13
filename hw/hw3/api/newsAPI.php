@@ -38,7 +38,7 @@ function getNews($keyword='', $lang='en', $source='', $sort = '', $pageSize = 20
         echo '<br />';
       }
       
-      echo '<div class="col-sm-12 col-lg-6" col-12>';
+      echo '<div class="col-sm-11 col-lg-6" col-11>';
       echo "<div class='card mx-auto'>";
       echo "<img class='card-img-top' src='$image' alt='Card image cap'>";
       echo "<div class='card-body'>";
@@ -152,7 +152,7 @@ function getTopHeadlines($category='top'){
         echo '<br />';
       }
       
-      echo '<div class="col-sm-12 col-lg-6" col-12>';
+      echo '<div class="col-sm-11 col-lg-6" col-11>';
       echo "<div class='card mx-auto'>";
       echo "<img class='card-img-top' src='$image' alt='Card image cap'>";
       echo "<div class='card-body'>";
