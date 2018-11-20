@@ -29,7 +29,7 @@
     </title>
     <script>
       function confirmDelete(){
-        return confirm("Are you sure you want to delete this product");        
+        return confirm("Are you sure you want to delete this product?");        
       }
       
     </script>
@@ -71,10 +71,11 @@
         echo "<td>" . $record['productDescription'] . "</td>";
         echo "<td>" . $record['price'] . "</td>";
         echo "<td><a class='btn btn-primary' href='updateProduct.php?productId=" . $record['productId'] . "'>Update</a></td>";
-        echo "<form action='deleteProduct.php' onsumbit='return confirmDelete()'>";
-        echo "<input type='hidden' name='productId' value='" . $record[productId] . "' />";
-        echo "<td><input type='submit' value='Remove' class='btn btn-danger'/>";
         
+        echo "<form action='deleteProduct.php' onsubmit='return confirmDelete()'>";
+        echo "<input type='hidden' name='productId' value='" . $record[productId] . "' />";
+        echo "<td><input type='submit' class='btn btn-danger' value='Remove'></td>";
+        echo "</form>";
       }
       echo "</tbody>";
       echo "</table>";
