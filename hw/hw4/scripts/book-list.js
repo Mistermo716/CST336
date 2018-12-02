@@ -94,8 +94,8 @@ const bookList = (function(){
   function handleNewItemSubmit(){
     $('.add-button').click(function(event){
       event.preventDefault();
-      console.log('newItemSubmit ran!');
-      const newItemTitle = $('.title-sub').val();
+      const newItemTitle = $('.title').val();
+      console.log(`Title is: ${newItemTitle}`);
       const newItemURL = $('.link-sub').val();
       const newRating = $('.star-sub').val();
       const newDescription = $('.desc-sub').val();
