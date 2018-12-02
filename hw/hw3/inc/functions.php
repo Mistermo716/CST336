@@ -1,5 +1,5 @@
 <?php
-
+//includes API put together
 include 'api/newsAPI.php';
 
 function displayNavbar(){
