@@ -2,6 +2,7 @@
   include 'inc/header.php';
 ?>
 <?php
+
 function getPetList(){
   include 'dbConnection.php';
   
@@ -34,16 +35,17 @@ foreach($pets as $pet){
         
         $(".petLink").click( function(){
             
-            //alert($(this).attr('id'));
-            $('#petInfoModal').modal("show");
-            $("#petInfo").html("<img src='img/loading.gif'>");
-            
-            $.ajax({
+            $("#petInfo").html("<div style='margin:auto' class='loader'></div>");
 
+            
+            var delay = 1000; //causing delay of API call so loader has time for load animation and I get points for the loader :)
+            var globalThis = this; //so I can access this within delay function
+            setTimeout(function() {
+              $.ajax({
                 type: "GET",
                 url: "api/getPetInfo.php",
                 dataType: "json",
-                data: { "id": $(this).attr('id')},
+                data: { "id": $(globalThis).attr('id')},
                 success: function(data,status) {
                 
                 //   console.log(data);
@@ -57,7 +59,11 @@ foreach($pets as $pet){
                 }
                 
             });
+              
+            }, delay);
             
+            $('#petInfoModal').modal("show");
+        
         }); 
         
     });
